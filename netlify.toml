@@ -2,9 +2,9 @@
 [build]
   publish = "."
 
-# Кешування картинок на рік (вони не змінюються по імені)
+# Кешування картинок на рік
 [[headers]]
-  for = "/images/*"
+  for = "/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
