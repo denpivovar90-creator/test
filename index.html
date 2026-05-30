@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PELYUSTKA — Jewelry</title>
+<meta name="description" content="PELYUSTKA Jewelry — прикраси, які на 100% відповідають фото. Безкоштовна доставка від 1500 грн.">
+<link rel="icon" type="image/png" href="https://i.ibb.co/LX8WCFxt/1ca33df9-f07d-4f0b-a51c-5847fa9aa49b.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#fff;}
+#pjw .ticker{background:#1a1a1a;color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.12em;font-weight:500;overflow:hidden;white-space:nowrap;padding:9px 0;}
+#pjw .ttrack{display:inline-flex;animation:ptick 32s linear infinite;}
+#pjw .ttrack span{padding:0 40px;}
+#pjw .ttrack span::after{content:'✦';margin-left:40px;color:#c96e88;}
+@keyframes ptick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#pjw .hdr{background:#fdf0f3;padding:20px 24px 0;display:flex;flex-direction:column;align-items:center;position:sticky;top:0;z-index:9999;box-shadow:0 1px 0 rgba(0,0,0,.07);}
+#pjw .htop{width:100%;display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;}
+#pjw .logo{display:flex;flex-direction:column;align-items:center;}
+#pjw .logo img.logoimg{width:60px;height:60px;object-fit:contain;mix-blend-mode:multiply;}
+#pjw .lbrand{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.35em;color:#c96e88;font-weight:400;margin-top:4px;line-height:1;}
+#pjw .lsub{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.45em;color:#1a1a1a;margin-top:3px;padding-bottom:2px;}
+#pjw .icons{display:flex;gap:16px;align-items:center;}
+#pjw .icons svg{cursor:pointer;opacity:.7;}
+#pjw .icons svg:hover{opacity:1;}
+#pjw .spacer{width:56px;}
+#pjw .nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;border-top:1px solid rgba(201,110,136,.15);padding:12px 0;width:100%;}
+#pjw .nav a{font-family:'Montserrat',sans-serif;font-size:14px;letter-spacing:.06em;color:#1a1a1a;text-decoration:none;white-space:nowrap;transition:color .2s;}
+#pjw .nav a:hover{color:#c96e88;}
+#pjw .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+#pjw .burger span{display:block;width:22px;height:1.5px;background:#333;border-radius:2px;}
+#pjw .hero{position:relative;width:100%;overflow:hidden;height:calc(100vh - 140px);}
+#pjw .track{display:flex;height:100%;transition:transform .9s cubic-bezier(.77,0,.18,1);}
+#pjw .slide{min-width:100%;height:100%;flex-shrink:0;}
+#pjw .slide img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+#pjw .catbtn{position:absolute;top:18px;right:18px;z-index:10;background:#c96e88;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:10px 26px;border-radius:30px;border:none;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 4px 14px rgba(201,110,136,.4);}
+#pjw .catbtn:hover{background:#a8556e;}
+#pjw .dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
+#pjw .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45);border:1.5px solid rgba(255,255,255,.8);cursor:pointer;transition:.3s;}
+#pjw .dot.on{background:#fff;transform:scale(1.3);}
+#pjw .counter{position:absolute;bottom:18px;right:18px;color:rgba(255,255,255,.75);font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.14em;z-index:10;}
+#pjw .perks{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #f0e6e9;}
+#pjw .perk{display:flex;align-items:flex-start;gap:12px;padding:20px 18px;border-right:1px solid #f0e6e9;}
+#pjw .perk:last-child{border-right:none;}
+#pjw .picon{color:#c96e88;flex-shrink:0;margin-top:2px;}
+#pjw .ptitle{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c96e88;margin-bottom:4px;}
+#pjw .pdesc{font-family:'Montserrat',sans-serif;font-size:11px;color:#888;line-height:1.6;}
+@media(max-width:640px){
+  #pjw .hdr{padding:14px 16px 0;}
+  #pjw .spacer{display:none;}
+  #pjw .burger{display:flex;}
+  #pjw .nav{display:none;flex-direction:column;gap:16px;padding:16px 0;}
+  #pjw .nav.open{display:flex;}
+  #pjw .lbrand{font-size:20px;}
+  #pjw .logo img.logoimg{width:48px;height:48px;}
+  #pjw .hero{height:56vw;min-height:260px;}
+  #pjw .perks{grid-template-columns:1fr;}
+  #pjw .perk{border-right:none;border-bottom:1px solid #f0e6e9;}
+  #pjw .perk:last-child{border-bottom:none;}
+  #pjw .catbtn{font-size:11px;padding:8px 16px;top:12px;right:12px;}
+  #pjw .nav a{font-size:15px;}
+}
+</style>
+</head>
+<body>
+
+<div id="pjw">
+
+<div class="ticker">
+  <div class="ttrack">
+    <span>ПРИКРАСИ, ЯКІ НА 100% ВІДПОВІДАЮТЬ ФОТО</span>
+    <span>ПЕРЕВІРКА НА БРАК ПЕРЕД ВІДПРАВКОЮ</span>
+    <span>ПРАЦЮЄМО ОФІЦІЙНО — ФОП</span>
+    <span>БЕЗКОШТОВНА ДОСТАВКА ВІД 1500 ГРН</span>
+    <span>ПРИКРАСИ, ЯКІ НА 100% ВІДПОВІДАЮТЬ ФОТО</span>
+    <span>ПЕРЕВІРКА НА БРАК ПЕРЕД ВІДПРАВКОЮ</span>
+    <span>ПРАЦЮЄМО ОФІЦІЙНО — ФОП</span>
+    <span>БЕЗКОШТОВНА ДОСТАВКА ВІД 1500 ГРН</span>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="htop">
+    <div class="spacer"></div>
+    <div class="logo">
+      <img class="logoimg" src="https://i.ibb.co/LX8WCFxt/1ca33df9-f07d-4f0b-a51c-5847fa9aa49b.png" alt="PELYUSTKA">
+      <div class="lbrand">PELYUSTKA</div>
+      <div class="lsub">JEWELRY</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="icons">
+        <svg width="20" height="20" fill="none" stroke="#555" stroke-width="1.7" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        <svg width="20" height="20" fill="none" stroke="#555" stroke-width="1.7" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
+      <button class="burger" onclick="document.getElementById('pjwNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav" id="pjwNav">
+    <a href="#">Акції</a>
+    <a href="#">Сертифікат</a>
+    <a href="#">Подарункове пакування</a>
+    <a href="#">Набори</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="track" id="pjwTrack">
+    <div class="slide"><img src="images/slide1.jpg" alt="Набір прикрас у коробочці"></div>
+    <div class="slide"><img src="images/slide2.jpg" alt="Каблучка, браслет та сережки"></div>
+    <div class="slide"><img src="images/slide3.jpg" alt="Золоті ластівки"></div>
+  </div>
+  <a href="#" class="catbtn">Каталог</a>
+  <div class="dots">
+    <div class="dot on" onclick="pjwGo(0)"></div>
+    <div class="dot" onclick="pjwGo(1)"></div>
+    <div class="dot" onclick="pjwGo(2)"></div>
+  </div>
+  <div class="counter" id="pjwCounter">01 / 03</div>
+</section>
+
+<section class="perks">
+  <div class="perk">
+    <div class="picon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20 7H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+    <div><div class="ptitle">Подарункове пакування</div><div class="pdesc">Кожне замовлення в фірмовій коробочці</div></div>
+  </div>
+  <div class="perk">
+    <div class="picon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <div><div class="ptitle">Перевірка якості</div><div class="pdesc">Контроль перед кожною відправкою</div></div>
+  </div>
+  <div class="perk">
+    <div class="picon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+    <div><div class="ptitle">Безкоштовна доставка</div><div class="pdesc">Від 1500 грн · Нова Пошта · Укрпошта</div></div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var c=0,t=3;
+  var tr=document.getElementById('pjwTrack');
+  var dots=document.querySelectorAll('#pjw .dot');
+  var num=document.getElementById('pjwCounter');
+  window.pjwGo=function(n){
+    c=((n%t)+t)%t;
+    tr.style.transform='translateX(-'+c*100+'%)';
+    dots.forEach(function(d,i){d.classList.toggle('on',i===c);});
+    num.textContent=(c+1<10?'0'+(c+1):c+1)+' / 03';
+  };
+  setInterval(function(){pjwGo(c+1);},4500);
+})();
+</script>
+
+</body>
+</html>
